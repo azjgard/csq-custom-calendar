@@ -1,0 +1,58 @@
+{
+  "configurations": [
+    {
+      "name": "frame",
+      "type": "or",
+      "options": [
+        {
+          "name": "thin",
+          "image": "wood path"
+        },
+        {
+          "name": "average",
+          "image": "plastic path"
+        },
+        {
+          "name": "thick",
+          "image": "granite path"
+        }
+      ]
+    },
+    {
+      "name": "background",
+      "type": "or",
+      "options": [
+        {
+          "name": "white",
+          "image": "wood path"
+        },
+        {
+          "name": "blue",
+          "image": "plastic path"
+        },
+        {
+          "name": "black",
+          "image": "granite path"
+        }
+      ]
+    },
+    {
+      "name": "design",
+      "type": "or",
+      "options": [
+        {
+          "name": "floral",
+          "image": "wood path"
+        },
+        {
+          "name": "modern",
+          "image": "plastic path"
+        },
+        {
+          "name": "rustic",
+          "image": "granite path"
+        }
+      ]
+    }
+  ]
+}

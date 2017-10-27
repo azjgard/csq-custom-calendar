@@ -1,0 +1,36 @@
+.Checkbox {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #555;
+  background-color: #eee;
+  position: relative;
+  display: inline-block;
+
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.Checkbox::after {
+  content: "";
+  position: absolute;
+  bottom: 25%;
+  right: 25%;
+  left: 25%;
+  top: 25%;
+
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+.Checkbox,
+.Checkbox::after,
+.Checkbox.checked::after {
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.Checkbox.checked::after {
+  background-color: #aaa;
+}
