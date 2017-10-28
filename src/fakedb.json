@@ -3,35 +3,33 @@
     {
       "name": "frame",
       "type": "or",
+      "priority": 10,
       "options": [
         {
-          "name": "thin",
+          "name": "barnwood",
           "image": "wood path"
         },
         {
-          "name": "average",
+          "name": "barnwood-dark",
           "image": "plastic path"
-        },
-        {
-          "name": "thick",
-          "image": "granite path"
         }
       ]
     },
     {
       "name": "background",
       "type": "or",
+      "priority": 0,
       "options": [
         {
-          "name": "white",
+          "name": "chalkboard",
           "image": "wood path"
         },
         {
-          "name": "blue",
+          "name": "redboard",
           "image": "plastic path"
         },
         {
-          "name": "black",
+          "name": "yellowboard",
           "image": "granite path"
         }
       ]
@@ -41,15 +39,19 @@
       "type": "or",
       "options": [
         {
-          "name": "floral",
+          "name": "calendar-0_box",
           "image": "wood path"
         },
         {
-          "name": "modern",
+          "name": "calendar-1_box",
           "image": "plastic path"
         },
         {
-          "name": "rustic",
+          "name": "calendar-2_box",
+          "image": "granite path"
+        },
+        {
+          "name": "calendar-3_box",
           "image": "granite path"
         }
       ]

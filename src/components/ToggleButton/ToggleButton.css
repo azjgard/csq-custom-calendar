@@ -1,4 +1,8 @@
-.Checkbox {
+.ToggleButtonContainer {
+  text-align: left;
+}
+
+.ToggleButton {
   width: 25px;
   height: 25px;
   border: 1px solid #555;
@@ -11,7 +15,7 @@
   transition: background-color 0.2s;
 }
 
-.Checkbox::after {
+.ToggleButton::after {
   content: "";
   position: absolute;
   bottom: 25%;
@@ -24,13 +28,13 @@
   transition: background-color 0.2s;
 }
 
-.Checkbox,
-.Checkbox::after,
-.Checkbox.checked::after {
+.ToggleButton,
+.ToggleButton::after,
+.ToggleButton.checked::after {
   border-radius: 50px;
   cursor: pointer;
 }
 
-.Checkbox.checked::after {
+.ToggleButton.checked::after {
   background-color: #aaa;
 }

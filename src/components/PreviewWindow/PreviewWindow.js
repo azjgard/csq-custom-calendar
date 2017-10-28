@@ -1,16 +1,13 @@
 import React, { Component } from "react";
 import "./PreviewWindow.css";
 
-// TODO:
-// Add overlaying image components that get their source updated
-// everytime the state here changes
+const rootPath = "/images";
 
 class PreviewWindow extends Component {
   preview = [];
 
   constructor(props) {
     super(props);
-
     this.state = this.props;
   }
 
@@ -20,13 +17,24 @@ class PreviewWindow extends Component {
     }
   }
 
+  // TODO:
+  // We need to pass in more information about each
+  // option that is tracked in the state.. in this case,
+  // so that we can set the z-index dynamically accordingly
+  // to what the user sets in the backend UI.
   getPreview() {
     let preview = [];
-    for (let i in this.state.currentOptions) {
+    for (let name in this.state.currentOptions) {
+      const current = this.state.currentOptions[name][0];
+      const path = `${rootPath}/${name}/${current}.png`;
+
+      let props = {};
+      if (name === "frame") {
+        props["style"] = { zIndex: 999 };
+      }
+
       preview.push(
-        <p key={i}>
-          {i}: {this.state.currentOptions[i][0]}
-        </p>
+        <img className="overlay" src={path} key={path} {...props} />
       );
     }
     return preview;
@@ -34,7 +42,11 @@ class PreviewWindow extends Component {
 
   render() {
     let preview = this.getPreview();
-    return <div className="PreviewWindow">{preview}</div>;
+    return (
+      <div className="PreviewWindow">
+        <div>{preview}</div>
+      </div>
+    );
   }
 }
 

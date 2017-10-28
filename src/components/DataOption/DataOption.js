@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import "./DataOption.css";
 
-import Checkbox from "../Checkbox/Checkbox";
+import toProperCase from "../../utils";
+
+// Components
+import ToggleButton from "../ToggleButton/ToggleButton";
 
 // TODO:
 // Create a custom checkbox component that implements
@@ -34,12 +37,11 @@ function And(props) {
 function Or(props) {
   return (
     <span>
-      <label htmlFor={props.pk}>{props.option}</label>
-      <Checkbox
+      <ToggleButton
         name={props.option}
-        defaultChecked={props.selected}
         checked={props.selected}
-        onChange={props.callback}
+        onClick={props.callback}
+        showName={true}
       />
     </span>
   );
@@ -163,7 +165,7 @@ class DataOption extends Component {
     }
     return (
       <div className="DataOption">
-        <h2>{this.props.name}</h2>
+        <h2>{toProperCase(this.props.name)}</h2>
         {options}
       </div>
     );
