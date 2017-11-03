@@ -41,7 +41,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PreviewWindow currentOptions={this.state.currentOptions} />
+        <PreviewWindow
+          currentOptions={this.state.currentOptions}
+          config={configurations}
+        />
         <DataOptionGroup
           data={configurations}
           callback={options => {

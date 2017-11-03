@@ -1,9 +1,15 @@
 .PreviewWindow {
-  position: absolute;
+  position: fixed;
   top: 5px;
-  right: 5px;
-  width: 230px;
-  height: 300px;
+  left: 5px;
+
+  /* width: 230px;
+  height: 300px; */
+
+  width: 50%;
+  max-width: 450px;
+  height: 65.217vw;
+  max-height: 585px;
   display: block;
   margin: auto;
 }

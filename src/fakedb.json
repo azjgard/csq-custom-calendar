@@ -1,10 +1,55 @@
 {
   "configurations": [
     {
+      "name": "title",
+      "type": "or",
+      "priority": 10,
+      "options": [
+        {
+          "name": "no title",
+          "image": "wood path"
+        },
+        {
+          "name": "with-title",
+          "image": "plastic path"
+        }
+      ]
+    },
+    {
+      "name": "design",
+      "type": "or",
+      "options": [
+        {
+          "name": "No calendar",
+          "image": "wood path"
+        },
+        {
+          "name": "calendar-0_box",
+          "image": "wood path"
+        },
+        {
+          "name": "calendar-1_box",
+          "image": "plastic path"
+        },
+        {
+          "name": "calendar-2_box",
+          "image": "granite path"
+        },
+        {
+          "name": "calendar-3_box",
+          "image": "granite path"
+        }
+      ]
+    },
+    {
       "name": "frame",
       "type": "or",
       "priority": 10,
       "options": [
+        {
+          "name": "No  frame",
+          "image": "wood path"
+        },
         {
           "name": "barnwood",
           "image": "wood path"
@@ -30,28 +75,6 @@
         },
         {
           "name": "yellowboard",
-          "image": "granite path"
-        }
-      ]
-    },
-    {
-      "name": "design",
-      "type": "or",
-      "options": [
-        {
-          "name": "calendar-0_box",
-          "image": "wood path"
-        },
-        {
-          "name": "calendar-1_box",
-          "image": "plastic path"
-        },
-        {
-          "name": "calendar-2_box",
-          "image": "granite path"
-        },
-        {
-          "name": "calendar-3_box",
           "image": "granite path"
         }
       ]
