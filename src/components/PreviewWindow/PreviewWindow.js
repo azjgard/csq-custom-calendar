@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./PreviewWindow.css";
 
+import ImageHiddenOnError from "../ImageHiddenOnError/ImageHiddenOnError";
+
 const rootPath = "/images";
 
 // TODO:
@@ -75,7 +77,12 @@ class PreviewWindow extends Component {
       }
 
       preview.push(
-        <img className={`overlay ${name}`} src={path} key={path} {...props} />
+        <ImageHiddenOnError
+          src={path}
+          key={path}
+          {...props}
+          className={`overlay ${name}`}
+        />
       );
     }
     return preview;
